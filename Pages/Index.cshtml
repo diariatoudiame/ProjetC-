@@ -1,0 +1,247 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Hospitaliers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .service {
+            width: 30%;
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-top: 3px solid #00bfff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .service h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .service a {
+            color: #00bfff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .service a:hover {
+            text-decoration: underline;
+        }
+
+        .department {
+            width: 30%;
+        }
+
+        .department h2 {
+            color: #333;
+        }
+
+        .department img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .motDuDirecteur {
+            background: linear-gradient(135deg, #e0f7fa, #f0f8ff);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .motDuDirecteur::before {
+            content: '"';
+            font-size: 150px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: rgba(0, 96, 100, 0.1);
+            font-family: 'Georgia', serif;
+        }
+
+        .motDuDirecteur .photo {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .motDuDirecteur .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .motDuDirecteur .info {
+            flex-grow: 1;
+        }
+
+        .motDuDirecteur h2 {
+            color: #006064;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 700;
+            border-bottom: 2px solid #00bcd4;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .motDuDirecteur .directeur-info {
+            font-size: 18px;
+            color: #00838f;
+            margin-bottom: 20px;
+        }
+
+        .motDuDirecteur p {
+            color: #004d40;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .motDuDirecteur .signature {
+            font-style: italic;
+            color: #00838f;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        @@media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .service, .department {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .motDuDirecteur {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .motDuDirecteur .photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .motDuDirecteur h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="service">
+            <i class="fas fa-x-ray fa-3x mb-3" style="color: var(--primary-color);"></i>
+            <h3>IMAGERIE</h3>
+            <p>Le Centre d'Imagerie Médicale la Clinique de La Madeleine est équipé des technologies les plus modernes de l'imagerie médicale...</p>
+            <a href="/Imagerie">En savoir + <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="service">
+            <i class="fas fa-female fa-3x mb-3" style="color: var(--primary-color);"></i>
+            <h3>GYNECOLOGIE</h3>
+            <p>Concernant la santé de la femme, la clinique de la Madeleine met à votre disposition une prise en charge gynéco-chirurgicale...</p>
+            <a href="/Gynecologie">En savoir + <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="service">
+            <i class="fas fa-procedures fa-3x mb-3" style="color: var(--primary-color);"></i>
+            <h3>CHIRURGIE</h3>
+            <p>La cœliochirurgie, permet une chirurgie dite « à ventre fermé » à l'aide d'un système vidéo par des orifices miniatures...</p>
+            <a href="/Chirurgie">En savoir + <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="department">
+            <h2>Pédiatrie</h2>
+            <a href="/Pediatrie">
+            <img src="~/images/bb.jpg" alt="Bébé souriant" asp-append-version="true">
+            </a>
+        </div>
+        <div class="department">
+            <h2>Laboratoire</h2>
+            <a href="/Labo">
+            <img src="~/images/laboratoire.jpg" alt="Équipement de laboratoire" asp-append-version="true">
+            </a>
+        </div>
+        <div class="department">
+            <h2>Ésthétique</h2>
+            <a href="/Esthetique">
+            <img src="~/images/chirurgie.jpg" alt="Traitement esthétique du visage">
+            </a>
+        </div>
+    </div>
+
+    <div class="motDuDirecteur">
+        <div class="photo">
+            <img src="~/images/directeur.jpg" alt="Docteur AÏDIBE Mahmoud">
+        </div>
+        <div class="info">
+            <h2>Mot du Directeur</h2>
+            <div class="directeur-info">
+                <strong>Docteur AÏDIBE Mahmoud</strong><br>
+                Diplômé de l'université de Bordeaux<br>
+                Spécialité : Gynécologue – Obstétricien
+            </div>
+            <p>
+                Chers visiteurs,
+            </p>
+            <p>
+                Bienvenue sur le site de la Clinique de La Madeleine. Ce site a été conçu pour répondre au mieux à vos préoccupations et vous permettre de découvrir notre établissement ainsi que tous les renseignements utiles à votre disposition.
+            </p>
+            <p>
+                Notre mission est d'offrir une prise en charge de proximité qui rime avec qualité. Grâce à nos plateaux techniques performants et modernes, ainsi qu'à nos équipes médicales et paramédicales engagées et volontaires, nous nous efforçons quotidiennement d'apporter la meilleure qualité de soins possible.
+            </p>
+            <p>
+                Notre ambition pour les trois prochaines années est de maintenir la Clinique de La Madeleine comme un acteur majeur du milieu médical à Dakar. Nous développons de nouveaux projets stratégiques qui nous permettront d'offrir un concept global et complet dans la prise en charge de nos patients, au sein de futures structures de pointe.
+            </p>
+            <p>
+                Grâce à nos praticiens reconnus et à nos collaborateurs dévoués et compétents, la Clinique de La Madeleine se positionne dès à présent et pour l'avenir comme un établissement ambitieux, novateur et incontournable au Sénégal et dans toute l'Afrique de l'Ouest.
+            </p>
+            <p>
+                Nous restons à votre écoute pour toute suggestion visant à améliorer la qualité de nos services. N'hésitez pas à utiliser notre page de contact pour nous faire part de vos remarques.
+            </p>
+            <div class="signature">
+                Dr. AÏDIBE Mahmoud<br>
+                Directeur de la Clinique de La Madeleine
+            </div>
+        </div>
+    </div>
+</body>
+</html>

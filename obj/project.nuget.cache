@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "b591EgxL2HnFwxt05RsQxr7ngiDXT3YqbGX1d4iYRtKHVrX1Ne1+eiWazCeXjnwtroonRXiB3669YqTZhsXKKQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\application_web.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Une erreur s’est produite lors de l’obtention des données de vulnérabilité du package : Une erreur s'est produite lors de l'envoi de la demande."
+    }
+  ]
+}

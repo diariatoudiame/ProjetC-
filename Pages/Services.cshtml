@@ -1,0 +1,263 @@
+﻿@page
+@model application_web.Pages.ServicesModel
+@{
+    ViewData["Title"] = "Nos Services";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Clinique de La Madeleine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            height:2200px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .services-header {
+            background: #00bcd4;
+            
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .services-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .services-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            #00bcd4; 
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            color: #006064;
+            margin-top: 0;
+        }
+
+        .service-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .btn-service {
+            display: inline-block;
+            background-color: #00bcd4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-service:hover {
+            background-color: #008ba3;
+        }
+
+        .cta-section {
+            background-color: #e0f7fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: #006064;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #006064;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-cta:hover {
+            background-color: #00838f;
+            transform: translateY(-3px);
+        }
+
+        @@media (max-width: 768px) {
+            .services-header h1 {
+                font-size: 2.5rem;
+            }
+            .services-header p {
+                font-size: 1rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="services-header">
+        <div class="container">
+            <h1>Nos Services de Santé</h1>
+            <p>À la Clinique de La Madeleine, nous offrons une gamme complète de services médicaux de haute qualité pour répondre à tous vos besoins de santé.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="~/images/imagerie.jpg" alt="Imagerie médicale">
+                </div>
+                <div class="service-content">
+                    <i class="fas fa-x-ray service-icon"></i>
+                    <h3>Imagerie Médicale</h3>
+                    <p>Équipements de pointe pour des diagnostics précis : radiologie, échographie, scanner, IRM.</p>
+                    <a href="#" class="btn-service">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="~/images/gynecologie.jpg" alt="Gynécologie">
+                </div>
+                <div class="service-content">
+                    <i class="fas fa-female service-icon"></i>
+                    <h3>Gynécologie</h3>
+                    <p>Soins complets pour la santé des femmes : consultations, chirurgie, suivi de grossesse.</p>
+                    <a href="#" class="btn-service">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="~/images/chirurgie.jpg" alt="Chirurgie">
+                </div>
+                <div class="service-content">
+                    <i class="fas fa-procedures service-icon"></i>
+                    <h3>Chirurgie</h3>
+                    <p>Interventions chirurgicales de pointe : générale, orthopédique, plastique et reconstructive.</p>
+                    <a href="#" class="btn-service">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="~/images/pediatrie.jpg" alt="Pédiatrie">
+                </div>
+                <div class="service-content">
+                    <i class="fas fa-baby service-icon"></i>
+                    <h3>Pédiatrie</h3>
+                    <p>Soins spécialisés pour les enfants : consultations, vaccinations, urgences pédiatriques.</p>
+                    <a href="#" class="btn-service">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="~/images/labo.jpg" alt="Laboratoire">
+                </div>
+                <div class="service-content">
+                    <i class="fas fa-flask service-icon"></i>
+                    <h3>Laboratoire d'Analyses</h3>
+                    <p>Analyses médicales rapides et fiables : biologie, microbiologie, hématologie.</p>
+                    <a href="#" class="btn-service">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="~/images/urgences.jpg" alt="Urgences">
+                </div>
+                <div class="service-content">
+                    <i class="fas fa-ambulance service-icon"></i>
+                    <h3>Service d'Urgences</h3>
+                    <p>Prise en charge rapide 24/7 pour toutes les urgences médicales et chirurgicales.</p>
+                    <a href="#" class="btn-service">En savoir plus</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin d'un rendez-vous ou d'informations supplémentaires ?</h2>
+            <div class="cta-buttons">
+                <a href="#" class="btn-cta">Prendre rendez-vous</a>
+                <a href="/Contact" class="btn-cta">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

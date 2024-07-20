@@ -1,0 +1,195 @@
+﻿@page
+@model application_web.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contactez-nous";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Clinique de La Madeleine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .contact-header {
+            background: linear-gradient(135deg, #00bcd4, #006064);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            margin: 60px 0;
+        }
+
+        .contact-info, .contact-form {
+            flex-basis: 48%;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            color: #006064;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: #00bcd4;
+            margin-right: 15px;
+            width: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #006064;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .btn-submit {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #008ba3;
+        }
+
+        .map-container {
+            margin-top: 60px;
+        }
+
+        .map-container h2 {
+            color: #006064;
+            margin-bottom: 20px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        @@media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+            }
+            .contact-info, .contact-form {
+                flex-basis: 100%;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="contact-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour répondre à vos questions et vous aider dans vos démarches.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Nos Coordonnées</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Avenue de la Santé, Dakar, Sénégal</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+221 33 123 45 67</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@cliniquemadeleine.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Lun - Ven : 8h00 - 20h00<br>Sam - Dim : 9h00 - 18h00</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Envoyez-nous un message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+        <div class="map-container">
+            <h2>Notre Emplacement</h2>
+            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0507558444915!2d-17.46747648570551!3d14.717351589733078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f0db5df5d3%3A0xb17c17d92d5db21f!2sDakar%2C%20Senegal!5e0!3m2!1sen!2sus!4v1625764215676!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+</body>
+</html>

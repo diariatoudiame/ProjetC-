@@ -1,0 +1,216 @@
+﻿@page
+@model application_web.Pages.GynecologieModel
+@{
+    ViewData["Title"] = "Gynécologie";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Clinique de La Madeleine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            height:2600px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .gyneco-header {
+            background: linear-gradient(135deg, #00bcd4, #006064);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .gyneco-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .gyneco-content {
+            display: flex;
+            flex-direction: column;
+            margin: 60px 0;
+        }
+
+        .services-section, .expertise-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #006064;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .service-grid, .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item, .expertise-item {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .service-item i, .expertise-item i {
+            font-size: 2rem;
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .image-item {
+            flex-basis: 48%;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .appointment-section {
+            background-color: #e0f7fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .btn-appointment {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-appointment:hover {
+            background-color: #008ba3;
+        }
+
+        @@media (max-width: 768px) {
+            .service-grid, .expertise-grid, .image-section {
+                grid-template-columns: 1fr;
+            }
+            .image-item {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="gyneco-header">
+        <div class="container">
+            <h1>Gynécologie</h1>
+            <p>Des soins spécialisés pour la santé des femmes à chaque étape de leur vie.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="gyneco-content">
+            <section class="services-section">
+                <h2>Nos Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Consultations gynécologiques</h3>
+                        <p>Examens de routine et suivi personnalisé</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-baby"></i>
+                        <h3>Suivi de grossesse</h3>
+                        <p>Accompagnement prénatal complet</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Dépistage</h3>
+                        <p>Tests de dépistage réguliers</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-procedures"></i>
+                        <h3>Chirurgie gynécologique</h3>
+                        <p>Interventions mini-invasives</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="expertise-section">
+                <h2>Notre Expertise</h2>
+                <div class="expertise-grid">
+                    <div class="expertise-item">
+                        <i class="fas fa-female"></i>
+                        <h3>Santé reproductive</h3>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-venus"></i>
+                        <h3>Ménopause</h3>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-dna"></i>
+                        <h3>Endocrinologie gynécologique</h3>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Oncologie gynécologique</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="image-section">
+                <div class="image-item">
+                    <img src="~/images/ad.jpg" alt="Consultation gynécologique">
+                </div>
+                <div class="image-item">
+                    <img src="~/images/bd.jpg" alt="Équipement de gynécologie" style="height:365px">
+                </div>
+                
+            </section>
+            <section class="image-section">
+                <div class="image-item">
+                    <img src="~/images/gros.jpg" alt="Consultation gynécologique">
+                </div>
+                <div class="image-item">
+                    <img src="~/images/bd.jpg" alt="Équipement de gynécologie" style="height:365px">
+                </div>
+
+            </section>
+
+            <section class="appointment-section">
+                <h2>Prendre Rendez-vous</h2>
+                <p>Pour planifier votre consultation gynécologique, veuillez nous contacter ou utiliser notre système de réservation en ligne.</p>
+                <button class="btn-appointment">Prendre Rendez-vous</button>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

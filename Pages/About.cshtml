@@ -1,0 +1,232 @@
+﻿@page
+@model application_web.Pages.AboutModel
+@{
+    ViewData["Title"] = "À propos";
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Clinique de La Madeleine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .breadcrumb_part {
+            background-color: #e0f7fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .breadcrumb_part h2 {
+            font-size: 2.5rem;
+            color: #006064;
+        }
+
+        .about_us {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .about_us_img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about_us_text h2 {
+            font-size: 2.2rem;
+            color: #006064;
+            margin-bottom: 1.5rem;
+        }
+
+        .about_us_text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #004d40;
+        }
+
+        .btn_2 {
+            display: inline-block;
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn_2:hover {
+            background-color: #00838f;
+            transform: translateY(-2px);
+        }
+
+        .banner_item {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .single_item {
+            text-align: center;
+        }
+
+        .single_item i {
+            font-size: 2.5rem;
+            color: #00bcd4;
+            margin-bottom: 10px;
+        }
+
+        .single_item h5 {
+            font-size: 1.1rem;
+            color: #006064;
+        }
+
+        .our_departments {
+            background-color: #f0f8ff;
+            padding: 80px 0;
+        }
+
+        .our_departments h2 {
+            font-size: 2.5rem;
+            color: #006064;
+            margin-bottom: 3rem;
+        }
+
+        .department_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .single_department {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .single_department:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .department_icon {
+            font-size: 3rem;
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+
+        .single_department h4 {
+            font-size: 1.4rem;
+            color: #004d40;
+            margin-bottom: 1rem;
+        }
+
+        .single_department p {
+            color: #333;
+        }
+
+        @@media (max-width: 768px) {
+            .about_us_img {
+                margin-bottom: 30px;
+            }
+
+            .banner_item {
+                flex-direction: column;
+            }
+
+            .single_item {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="breadcrumb_part">
+        <div class="container">
+            <h2>À propos de la Clinique de La Madeleine</h2>
+        </div>
+    </section>
+
+    <section class="about_us">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6">
+                    <div class="about_us_img">
+                        <img src="~/images/us.jpg" style="height:500px;" alt="Façade de la Clinique de La Madeleine">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="about_us_text">
+                        <h2>Notre engagement envers votre santé</h2>
+                        <p>
+                            La Clinique de La Madeleine est un établissement de santé de pointe, dédié à offrir des soins médicaux de haute qualité à Dakar et dans toute l'Afrique de l'Ouest. Notre équipe de professionnels passionnés s'engage à fournir une prise en charge personnalisée et des traitements innovants pour répondre aux besoins de santé de nos patients.
+                        </p>
+                        <a class="btn_2" href="/Services">Découvrir nos services</a>
+                        <div class="banner_item">
+                            <div class="single_item">
+                                <i class="fas fa-ambulance"></i>
+                                <h5>Urgences 24/7</h5>
+                            </div>
+                            <div class="single_item">
+                                <i class="fas fa-user-md"></i>
+                                <h5>Experts qualifiés</h5>
+                            </div>
+                            <div class="single_item">
+                                <i class="fas fa-heartbeat"></i>
+                                <h5>Soins de qualité</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our_departments">
+        <div class="container">
+            <h2 class="text-center mb-5">Nos Départements Spécialisés</h2>
+            <div class="department_grid">
+                <div class="single_department">
+                    <i class="fas fa-x-ray department_icon"></i>
+                    <h4>Imagerie Médicale</h4>
+                    <p>Équipements de pointe pour des diagnostics précis et rapides.</p>
+                </div>
+                <div class="single_department">
+                    <i class="fas fa-female department_icon"></i>
+                    <h4>Gynécologie</h4>
+                    <p>Soins complets pour la santé des femmes à tous les âges.</p>
+                </div>
+                <div class="single_department">
+                    <i class="fas fa-procedures department_icon"></i>
+                    <h4>Chirurgie</h4>
+                    <p>Techniques chirurgicales avancées pour des résultats optimaux.</p>
+                </div>
+                <div class="single_department">
+                    <i class="fas fa-baby department_icon"></i>
+                    <h4>Pédiatrie</h4>
+                    <p>Soins attentifs et spécialisés pour les plus jeunes patients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
