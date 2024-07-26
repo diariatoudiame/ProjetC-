@@ -28,3 +28,4 @@ C:\Users\hp\source\repos\application_web\application_web\obj\Debug\net8.0\refint
 C:\Users\hp\source\repos\application_web\application_web\obj\Debug\net8.0\application_web.pdb
 C:\Users\hp\source\repos\application_web\application_web\obj\Debug\net8.0\application_web.genruntimeconfig.cache
 C:\Users\hp\source\repos\application_web\application_web\obj\Debug\net8.0\ref\application_web.dll
+C:\Users\hp\source\repos\application_web\application_web\obj\Debug\net8.0\application_web.sourcelink.json

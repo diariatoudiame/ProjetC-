@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\afee.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\ans.jpg",
+      "PackagePath": "staticwebassets\\images\\ans.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\bb.jpg",
       "PackagePath": "staticwebassets\\images\\bb.jpg"
     },
@@ -73,6 +77,14 @@
       "PackagePath": "staticwebassets\\images\\efe.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\ela.jpg",
+      "PackagePath": "staticwebassets\\images\\ela.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\est.jpg",
+      "PackagePath": "staticwebassets\\images\\est.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\gros.jpg",
       "PackagePath": "staticwebassets\\images\\gros.jpg"
     },
@@ -97,12 +109,20 @@
       "PackagePath": "staticwebassets\\images\\ing.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\inj.jpg",
+      "PackagePath": "staticwebassets\\images\\inj.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\labo.jpg",
       "PackagePath": "staticwebassets\\images\\labo.jpg"
     },
     {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\laboratoire.jpg",
       "PackagePath": "staticwebassets\\images\\laboratoire.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\laser.jpg",
+      "PackagePath": "staticwebassets\\images\\laser.jpg"
     },
     {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\logo-madeleine.png",
@@ -113,8 +133,16 @@
       "PackagePath": "staticwebassets\\images\\madelaine.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\mi.jpg",
+      "PackagePath": "staticwebassets\\images\\mi.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\pediatrie.jpg",
       "PackagePath": "staticwebassets\\images\\pediatrie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\ple.jpg",
+      "PackagePath": "staticwebassets\\images\\ple.jpg"
     },
     {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\radio.jpg",
@@ -131,6 +159,10 @@
     {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\ss.jpg",
       "PackagePath": "staticwebassets\\images\\ss.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\tl.jpg",
+      "PackagePath": "staticwebassets\\images\\tl.jpg"
     },
     {
       "Id": "C:\\Users\\hp\\source\\repos\\application_web\\application_web\\wwwroot\\images\\urgences.jpg",
